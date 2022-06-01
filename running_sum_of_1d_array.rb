@@ -19,4 +19,15 @@
 # Output: [3,4,6,16,17]
 
 def running_sum(nums)
+  index = 0
+  array = []
+  array << nums[0]
+  while nums.length != array.length
+    x = nums[index + 1] + array[index]
+    array << x
+    index += 1
+  end
+  return array
 end
+
+p running_sum([1, 2, 3, 4])
