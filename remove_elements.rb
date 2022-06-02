@@ -12,3 +12,14 @@
 # Explanation: Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.
 # Note that the five elements can be returned in any order.
 # It does not matter what you leave beyond the returned k (hence they are underscores).
+
+def remove_element(nums, val)
+  val_count = 0
+  nums.each { |x| val_count += 1 if x == val }
+  nums = nums - [val]
+  k = nums.length
+  return nums
+end
+
+p remove_element([3, 2, 2, 3], 3)
+p remove_element([0, 1, 2, 2, 3, 0, 4, 2], 2)
