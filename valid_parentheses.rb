@@ -20,4 +20,21 @@
 # Output: false
 
 def is_valid(s)
+  s_str = s.split("")
+  par_count = s_str.tally
+  if par_count["("] == par_count[")"]
+    if par_count["["] == par_count["]"]
+      if par_count["{"] == par_count["}"]
+        return true
+      end
+    end
+  else
+    return false
+  end
 end
+
+p is_valid("()[]{}")
+p is_valid("(]")
+p is_valid("()")
+
+# this solution does not account for the placement of the parentheses
