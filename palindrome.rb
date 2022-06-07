@@ -23,4 +23,13 @@
 # Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 def is_palindrome(x)
+  if x.to_s == x.to_s.reverse
+    return true
+  else
+    return false
+  end
 end
+
+p is_palindrome(121)
+p is_palindrome(-121)
+p is_palindrome(10)
