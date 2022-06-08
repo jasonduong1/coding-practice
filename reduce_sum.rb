@@ -6,3 +6,11 @@
 # Output: 10
 
 # Explanation: (1 + 2 + 3 + 4) = 10
+
+def sum(input)
+  output = 0
+  input.each { |num| output += num }
+  output
+end
+
+p sum([1, 2, 3, 4])
