@@ -7,3 +7,15 @@
 
 # Output:
 # [2, 3, 1, 2, 2, 1, 5, 2, 2]
+
+def skip(input)
+  output = []
+  index = 0
+  while index < input.length
+    output << input[index]
+    index += input[index]
+  end
+  output
+end
+
+p skip([2, 1, 3, 2, 5, 1, 2, 6, 2, 7, 1, 5, 6, 3, 2, 6, 2, 1, 2])
