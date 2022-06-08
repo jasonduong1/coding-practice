@@ -1,7 +1,14 @@
-Given a string, write a function that returns true if the “$” character is contained within the string or false if it is not.
+# Given a string, write a function that returns true if the “$” character is contained within the string or false if it is not.
 
-Input: “i hate $ but i love money i know i know im crazy”
-Output: true
+# Input: “i hate $ but i love money i know i know im crazy”
+# Output: true
 
-Input: “abcdefghijklmnopqrstuvwxyz”
-Output: false
+# Input: “abcdefghijklmnopqrstuvwxyz”
+# Output: false
+
+def contains(input)
+  input.include?("$")
+end
+
+p contains("i hate $ but i love money i know i know im crazy")
+p contains("abcdefghijklmnopqrstuvwxyz")
