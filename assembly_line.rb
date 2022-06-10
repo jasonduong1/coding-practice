@@ -13,15 +13,26 @@ class AssemblyLine
   end
 
   def production_rate_per_hour
-    raise "Please implement the AssemblyLine#production_rate_per_hour method"
+    rate_per_hour = 221
+    production = @speed * rate_per_hour
+    if @speed == 10
+      total_production = production * 0.77
+    elsif @speed == 9
+      total_production = production * 0.8
+    elsif @speed > 4
+      total_production = production * 0.9
+    else
+      total_production = production
+    end
+    total_production
   end
 
   def working_items_per_minute
-    raise "Please implement the AssemblyLine#working_items_per_minute method"
+    (production_rate_per_hour / 60).to_i
   end
 end
 
-AssemblyLine.new(6).production_rate_per_hour
+p AssemblyLine.new(6).production_rate_per_hour
 #=> 1193.4
-AssemblyLine.new(6).production_rate_per_hour
-#=> 1193.4
+p AssemblyLine.new(6).working_items_per_minute
+#=> 19
