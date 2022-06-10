@@ -17,13 +17,14 @@
 #   end
 #   output_array.join
 # end
-
-def alternate(input)
-  (0...input.size).each do |index|
-    input[index] = index.even? ? input[index].downcase : input[index].upcase
+class AlternateCapitals
+  def alternate!(input)
+    (0...input.size).each do |index|
+      input[index] = index.even? ? input[index].downcase : input[index].upcase
+    end
+    input
   end
-  input
 end
 
-p alternate("hello, how are your porcupines today?")
-p alternate("hello")
+# p alternate("hello, how are your porcupines today?")
+# p alternate("hello")
