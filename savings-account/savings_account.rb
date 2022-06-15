@@ -13,7 +13,11 @@ module SavingsAccount
 
   def self.annual_balance_update(balance)
     interest_rate = self.interest_rate(balance)
-    annual_balance = (interest_rate * 0.01 + 1) * balance
+    if balance < 0
+      annual_balance = (interest_rate * 0.01 - 1).abs * balance
+    else
+      annual_balance = (interest_rate * 0.01 + 1) * balance
+    end
   end
 
   def self.years_before_desired_balance(current_balance, desired_balance)
@@ -26,4 +30,5 @@ module SavingsAccount
   end
 end
 
-p SavingsAccount.years_before_desired_balance(200.75, 214.88)
+p SavingsAccount.annual_balance_update(1_000.0)
+p SavingsAccount.annual_balance_update(-0.123)

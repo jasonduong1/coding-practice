@@ -29,6 +29,11 @@ RSpec.describe SavingsAccount do
         expect(SavingsAccount.annual_balance_update(200.75)).to be_within(0.00001).of(201.75375)
       end
     end
+    context -0.123 do
+      it "returns -0.12695199" do
+        expect(SavingsAccount.annual_balance_update(-0.123)).to be_within(0.00001).of(-0.12695199)
+      end
+    end
   end
   describe "self.years_before_desired_balance" do
     context 200.75, 214.88 do
