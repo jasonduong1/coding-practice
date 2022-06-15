@@ -30,4 +30,11 @@ RSpec.describe SavingsAccount do
       end
     end
   end
+  describe "self.years_before_desired_balance" do
+    context 200.75, 214.88 do
+      it "returns 14" do
+        expect(SavingsAccount.years_before_desired_balance(200.75, 214.88)).to eq 14
+      end
+    end
+  end
 end
