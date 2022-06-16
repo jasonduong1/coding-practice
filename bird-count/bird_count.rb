@@ -4,24 +4,24 @@ class BirdCount
   end
 
   def initialize(birds_per_day)
-    birds_per_day
+    @birds_per_day = birds_per_day
   end
 
   def yesterday
-    raise "Please implement the BirdCount#yesterday method"
+    @birds_per_day[-2]
   end
 
   def total
-    raise "Please implement the BirdCount#total method"
+    @birds_per_day.sum
   end
 
   def busy_days
-    raise "Please implement the BirdCount#busy_days method"
+    busy_days = 0
+    @birds_per_day.each { |day| busy_days += 1 if day > 4 }
+    busy_days
   end
 
   def day_without_birds?
-    raise "Please implement the BirdCount#day_without_birds method"
+    @birds_per_day.include?(0)
   end
 end
-
-p BirdCount.last_week
