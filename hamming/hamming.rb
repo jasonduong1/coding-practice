@@ -7,3 +7,19 @@
 
 # Input: "ABCDEFG", "ABCDEFG",
 # Output: 0
+
+def hamming(str1, str2)
+  output = 0
+  index = 0
+  while index < str1.length
+    if str1[index] != str2[index]
+      output += 1
+    end
+    index += 1
+  end
+  output
+end
+
+p hamming("ABCDEFG", "ABCDEFG")
+p hamming("ABCDEFG", "ABCXEOG")
+p hamming("", "")
