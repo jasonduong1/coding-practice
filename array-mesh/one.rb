@@ -5,9 +5,7 @@
 
 def mesh(arr1, arr2)
   new_arr = []
-  arr1.each do |x|
-    arr2.each { |y| new_arr << (x + y) }
-  end
+  arr1.each { |x| arr2.each { |y| new_arr << (x + y) } }
   new_arr
 end
 
