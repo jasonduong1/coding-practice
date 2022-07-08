@@ -5,7 +5,7 @@
 
 def product(arr)
   index = 0
-  output = 0
+  arr.length == 2 ? output = arr[0] * arr[1] : output = 0
   while index < arr.length
     index2 = index + 1
     while index2 < arr.length
@@ -18,6 +18,7 @@ def product(arr)
   output
 end
 
-p product([5, -2, 1, -9, -7, 2, 6, 10, 9])
-
-# this does not account for array with only negative numbers
+p product([5, -2, 1, -9, -7, 2, 6])
+p product([-1, 1])
+p product([0, 5])
+p product([-1, 5, -1])
