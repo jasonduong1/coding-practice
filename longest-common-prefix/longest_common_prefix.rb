@@ -14,3 +14,10 @@ Explanation: There is no common prefix among the input strings.
 Note:
 
 All given inputs are in lowercase letters a-z.
+
+def common([arr])
+  in_common = ""
+  index = 0
+  comparison = arr[0][index]
+  arr.each { |x| }
+end
