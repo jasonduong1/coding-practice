@@ -23,11 +23,12 @@
 # ]
 
 def replace_id_number_with_real_name(array, hash)
-  array.each do |post|
-    id = post[:submitted_by]
-    user = hash[id]
-    post[:submitted_by] = user
-  end
+  array.each { |title| title[:submitted_by] = hash[title[:submitted_by]] }
+  # array.each do |post|
+  #   id = post[:submitted_by]
+  #   user = hash[id]
+  #   post[:submitted_by] = user
+  # end
 end
 
 p replace_id_number_with_real_name(
