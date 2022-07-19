@@ -14,3 +14,11 @@
 # 'o' => 1,
 # 'u' => 1
 # }
+
+def transform(array, num)
+  output = {}
+  array.each { |letter| output[letter] = num }
+  output
+end
+
+p transform(["a", "e", "i", "o", "u"], 1)
