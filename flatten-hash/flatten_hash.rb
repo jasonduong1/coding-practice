@@ -13,3 +13,5 @@ def flatten(hash)
 end
 
 p flatten({ "a" => 1, "b" => 2, "c" => 3, "d" => 4 })
+
+# p ({ "a" => 1, "b" => 2, "c" => 3, "d" => 4 }).flatten #ruby function
