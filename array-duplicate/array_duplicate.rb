@@ -7,13 +7,14 @@
 
 def duplicate?(array)
   hash = {}
-  array.each do |number|
-    if hash[number]
-      return number
-    else
-      hash[number] = true
-    end
-  end
+  # array.each do |number|
+  #   if hash[number]
+  #     return number
+  #   else
+  #     hash[number] = true
+  #   end
+  # end
+  array.each { |number| hash[number] ? (return number) : hash[number] = 1 }
 end
 
 p duplicate?([5, 2, 9, 7, 2, 6])
