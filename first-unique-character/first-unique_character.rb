@@ -13,3 +13,14 @@
 # (The "l" and "o" are repeated, so the first non-repeating character is the "v", which is at index 2.)
 
 # Note: You may assume the string contain only lowercase letters.
+
+def first_unique_character(string)
+  characters = string.split("")
+  hash = {}
+  characters.each { |letter| hash[letter] ? hash[letter] += 1 : hash[letter] = 1 }
+  hash.key(1) ? string.index(hash.key(1)) : -1
+end
+
+p first_unique_character("leetcode")
+p first_unique_character("loveleetcode")
+p first_unique_character("lolol")
