@@ -14,14 +14,8 @@ def anagram?(string1, string2)
   array2 = string2.split("")
   array1.each { |letter| hash[letter] ? hash[letter] += 1 : hash[letter] = 1 }
   array2.each do |letter|
-    if hash[letter]
-      hash[letter] -= 1
-      if hash[letter] == -1
-        return false
-      end
-    else
-      return false
-    end
+    !hash[letter] ? (return false) : hash[letter] -= 1
+    (return false) if hash[letter] == -1
   end
   return true
 end
@@ -29,3 +23,6 @@ end
 p anagram?("silent", "listen")
 p anagram?("frog", "bear")
 p anagram?("rar", "arr")
+p anagram?("rar", "arr")
+p anagram?("sadder", "dreads")
+p anagram?("olo", "lol")
