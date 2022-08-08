@@ -29,10 +29,12 @@ class Translation
   end
   def self.of_rna(strand)
     output = []
-    codons = strand.chars.each_slice(3).map(&:join)
+    # codons = strand.chars.each_slice(3).map(&:join)
+    codons = strand.scan(/.{3}/)
     codons.each { |codon| @hash[codon] == "STOP" ? (return output) : output.push(@hash[codon]) }
     return output
   end
 end
 
-p Translation.of_rna("AUG")
+p Translation.of_codon("AUG")
+p Translation.of_rna("UGGUGUUAUUAAUGGUUU")
