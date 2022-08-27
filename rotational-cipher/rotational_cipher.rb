@@ -4,7 +4,7 @@ class RotationalCipher
     return (string) if number == 26 || number == 0
     slice = @alphabet.slice(0, number)
     cipher_array = @alphabet.drop(number) + slice
-    cipher_hash = {}
+    cipher_hash = { "0" => "0", "1" => "1", "2" => "2", "3" => "3", "4" => "4", "5" => "5", "6" => "6", "7" => "7", "8" => "8", "9" => "9", "!" => "!", "." => ".", "," => ",", "'" => "'", " " => " " }
     index = 0
     @alphabet.each do |x|
       cipher_hash[x] = cipher_array[index]
@@ -20,9 +20,8 @@ class RotationalCipher
   end
 end
 
-p RotationCipher.rotate("the", 13)
-p RotationCipher.rotate("Omg", 5)
-p RotationCipher.rotate("hello there", 5)
+p RotationalCipher.rotate("the", 13)
+p RotationalCipher.rotate("Omg", 5)
+p RotationalCipher.rotate("hello there", 5)
 
 # does not currently account for capitalized chars
-# does not account for special characters
