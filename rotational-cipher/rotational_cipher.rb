@@ -8,10 +8,11 @@ class RotationalCipher
     index = 0
     @alphabet.each do |x|
       cipher_hash[x] = cipher_array[index]
+      cipher_hash[x.upcase] = cipher_array[index].upcase
       index += 1
     end
     return (cipher_hash[string]) if string.length == 1
-    string_array = string.downcase.split("")
+    string_array = string.split("")
     cipher_string_array = []
     string_array.each do |x|
       cipher_string_array << cipher_hash[x]
