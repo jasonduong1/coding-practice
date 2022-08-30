@@ -2,8 +2,9 @@ class RotationalCipher
   @alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   def self.rotate(string, number)
     return (string) if number == 26 || number == 0
-    slice = @alphabet.slice(0, number)
-    cipher_array = @alphabet.drop(number) + slice
+    # slice = @alphabet.slice(0, number)
+    # cipher_array = @alphabet.drop(number) + slice
+    cipher_array = @alphabet.slice(number, 26) + @alphabet.slice(0, number)
     cipher_hash = { "0" => "0", "1" => "1", "2" => "2", "3" => "3", "4" => "4", "5" => "5", "6" => "6", "7" => "7", "8" => "8", "9" => "9", "!" => "!", "." => ".", "," => ",", "'" => "'", " " => " " }
     index = 0
     @alphabet.each do |x|
@@ -24,5 +25,3 @@ end
 p RotationalCipher.rotate("the", 13)
 p RotationalCipher.rotate("Omg", 5)
 p RotationalCipher.rotate("hello there", 5)
-
-# does not currently account for capitalized chars
