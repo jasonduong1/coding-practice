@@ -1,7 +1,6 @@
 function fizzBuzz() {
   var output = [];
-  var number = 1;
-  while (number <= 100) {
+  for (var number = 1; number <= 100; number++) {
     if (number % 15 === 0) {
       output.push("FizzBuzz");
     } else if (number % 3 === 0) {
@@ -11,7 +10,6 @@ function fizzBuzz() {
     } else {
       output.push(number);
     }
-    number++;
   }
   console.log(output);
 }
