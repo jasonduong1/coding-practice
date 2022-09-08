@@ -47,7 +47,7 @@ def anagram(array)
     hash[sorted_x] ? hash[sorted_x] += 1 : hash[sorted_x] = 0
   end
   hash.delete_if { |_, v| v == 0 }
-  hash.map { |_, v| short_array << v }
+  hash.map { |_, v| short_array.push(v) }
   short_array.each { |x| output += ((x * x + x) / 2) }
   output
 end
