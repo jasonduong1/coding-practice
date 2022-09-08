@@ -36,3 +36,22 @@
 # numbers: [1, 2, 4, 3, 1]
 # Expected Output:
 # [0, 1, 0]
+
+def zigzag(array)
+  index = 1
+  output = []
+  while index <= array.length - 2
+    if array[index] > array[index - 1] && array[index] > array[index + 1] || array[index] < array[index - 1] && array[index] < array[index + 1]
+      output << 1
+    else
+      output << 0
+    end
+    index += 1
+  end
+  output
+end
+
+p zigzag([1, 2, 1, 3, 4])
+p zigzag([1, 2, 3, 4])
+p zigzag([1000000000, 1000000000, 1000000000])
+p zigzag([1, 2, 4, 3, 1])
