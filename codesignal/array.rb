@@ -24,17 +24,36 @@
 # Expected Output:
 # true
 
-Input:
-a: [1, 4, 5, 6, 3]
-Expected Output:
-false
+# Input:
+# a: [1, 4, 5, 6, 3]
+# Expected Output:
+# false
 
-Input:
-a: [1]
-Expected Output:
-true
+# Input:
+# a: [1]
+# Expected Output:
+# true
 
-Input:
-a: [1, 2]
-Expected Output:
-true
+# Input:
+# a: [1, 2]
+# Expected Output:
+# true
+
+def order(a)
+  return true if a.length == 1
+  if a.length.odd?
+    arr1 = a.take(a.length / 2 + 1)
+    arr2 = a.drop(a.length / 2 + 1).reverse
+  else
+    arr1 = a.take(a.length / 2 + 1)
+    arr2 = a.drop(a.length / 2 + 1).reverse
+  end
+  b = arr1.zip(arr2).flatten.compact
+  p b
+  return b == b.sort
+end
+
+p order([1, 3, 5, 6, 4, 2])
+p order([1, 4, 5, 6, 3])
+p order([1])
+p order([1, 2])

@@ -16,32 +16,32 @@
 # solution(s1, s2) = "stouperwer".
 # Because in both strings all symbols occur only 1 time, strings are merged as usual. You can find explanation for this example on the image in the description.
 
-Input:
-s1: "dce"
-s2: "cccbd"
-Expected Output:
-"dcecccbd"
+# Input:
+# s1: "dce"
+# s2: "cccbd"
+# Expected Output:
+# "dcecccbd"
 
-Input:
-s1: "super"
-s2: "tower"
-Expected Output:
-"stouperwer"
+# Input:
+# s1: "super"
+# s2: "tower"
+# Expected Output:
+# "stouperwer"
 
-Input:
-s1: "a"
-s2: "z"
-Expected Output:
-"az"
+# Input:
+# s1: "a"
+# s2: "z"
+# Expected Output:
+# "az"
 
-Input:
-s1: "uchlmfelno"
-s2: "gr"
-Expected Output:
-"gruchlmfelno"
+# Input:
+# s1: "uchlmfelno"
+# s2: "gr"
+# Expected Output:
+# "gruchlmfelno"
 
-Input:
-s1: "kkihj"
-s2: "jbsmfoftph"
-Expected Output:
-"jbsmfoftphkkihj"
+# Input:
+# s1: "kkihj"
+# s2: "jbsmfoftph"
+# Expected Output:
+# "jbsmfoftphkkihj"

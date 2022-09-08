@@ -17,22 +17,22 @@
 
 # Since all the elements of numbers are the same, there are no zigzags.
 
-Input:
-numbers: [1, 2, 1, 3, 4]
-Expected Output:
-[1, 1, 0]
+# Input:
+# numbers: [1, 2, 1, 3, 4]
+# Expected Output:
+# [1, 1, 0]
 
-Input:
-numbers: [1, 2, 3, 4]
-Expected Output:
-[0, 0]
+# Input:
+# numbers: [1, 2, 3, 4]
+# Expected Output:
+# [0, 0]
 
-Input:
-numbers: [1000000000, 1000000000, 1000000000]
-Expected Output:
-[0]
+# Input:
+# numbers: [1000000000, 1000000000, 1000000000]
+# Expected Output:
+# [0]
 
-Input:
-numbers: [1, 2, 4, 3, 1]
-Expected Output:
-[0, 1, 0]
+# Input:
+# numbers: [1, 2, 4, 3, 1]
+# Expected Output:
+# [0, 1, 0]

@@ -13,22 +13,22 @@
 # a[2] = 872 and a[6] = 872 (i = 2 and j = 6),
 # a[5] = 278 and a[6] = 872 (i = 5 and j = 6).
 
-Input:
-a: [25, 35, 872, 228, 53, 278, 872]
-Expected Output:
-4
+# Input:
+# a: [25, 35, 872, 228, 53, 278, 872]
+# Expected Output:
+# 4
 
-Input:
-a: [30, 72, 3, 227]
-Expected Output:
-0
+# Input:
+# a: [30, 72, 3, 227]
+# Expected Output:
+# 0
 
-Input:
-a: [1, 1, 1, 1, 1]
-Expected Output:
-10
+# Input:
+# a: [1, 1, 1, 1, 1]
+# Expected Output:
+# 10
 
-Input:
-a: [0, 5, 50, 7, 0, 550, 500, 55, 11]
-Expected Output:
-1
+# Input:
+# a: [0, 5, 50, 7, 0, 550, 500, 55, 11]
+# Expected Output:
+# 1
