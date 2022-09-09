@@ -36,7 +36,7 @@
 # compare first element sorted with remaining elements sorted
 # drop first element when compared
 # compare till array length is = 2
-# use summation (n*n +n)/2
+# use summation (n*n +n)/2 [aka nth triangle number]
 
 def anagram(array)
   hash = {}
