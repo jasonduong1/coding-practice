@@ -16,32 +16,37 @@
 # solution(s1, s2) = "stouperwer".
 # Because in both strings all symbols occur only 1 time, strings are merged as usual. You can find explanation for this example on the image in the description.
 
-# Input:
-# s1: "dce"
-# s2: "cccbd"
-# Expected Output:
-# "dcecccbd"
+# account for 2 things
+# 1. alphabetic order
+# 2. letters following the ones in comparison (have to check this first)
+# convert to ascii value?
 
-# Input:
-# s1: "super"
-# s2: "tower"
-# Expected Output:
-# "stouperwer"
+def lexi(str1, str2)
+  merge = []
+  arr1 = str1.split("")
+  arr2 = str2.split("")
+  while arr1.length != 0 && arr2.length != 0
+    if arr1[0] == arr1[1]
+      merge.push(arr2[0])
+      arr2.slice!(0)
+    elsif arr2[0] == arr2[1]
+      merge.push(arr1[0])
+      arr1.slice!(0)
+    else
+      if arr1[0].ord > arr2[0].ord
+        merge.push(arr2[0])
+        arr2.slice!(0)
+      else
+        merge.push(arr1[0])
+        arr1.slice!(0)
+      end
+    end
+  end
+  arr1.length == 0 ? merge.push(arr2) : merge.push(arr1)
+  merge.flatten.join("")
+end
 
-# Input:
-# s1: "a"
-# s2: "z"
-# Expected Output:
-# "az"
-
-# Input:
-# s1: "uchlmfelno"
-# s2: "gr"
-# Expected Output:
-# "gruchlmfelno"
-
-# Input:
-# s1: "kkihj"
-# s2: "jbsmfoftph"
-# Expected Output:
-# "jbsmfoftphkkihj"
+p lexi("dce", "cccbd") # "dcecccbd"
+p lexi("super", "tower") # "stouperwer"
+p lexi("a", "z") # "az"
+p lexi("kkihj", "jbsmfoftph") # "jbsmfoftphkkihj"
