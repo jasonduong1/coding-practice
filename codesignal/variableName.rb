@@ -1,6 +1,3 @@
 def solution(name)
-  array = name.split("")
-  return false if array[0].match(/\d|\s/)
-  return false if name.match(/\W/)
-  true
+  name.match(/^\d|\W|\s/) ? false : true
 end
