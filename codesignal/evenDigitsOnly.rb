@@ -1,5 +1,5 @@
 def solution(n)
-  arr = n.to_s.split("")
-  arr.each { |x| return false if x.to_i.odd? }
+  arr = n.to_s.chars.map(&:to_i)
+  arr.each { |x| return false if x.odd? }
   true
 end
