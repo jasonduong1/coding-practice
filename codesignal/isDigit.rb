@@ -1,3 +1,3 @@
 def solution(symbol)
-  symbol.match(/\d/) ? true : false
+  symbol.match?(/\d/)
 end
